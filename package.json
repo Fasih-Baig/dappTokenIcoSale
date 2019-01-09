@@ -1,0 +1,21 @@
+{
+	"name": "dapp-token-sale",
+	"version": "1.0.0",
+	"description": "Dapp Token Sale ICO",
+	"main": "truffle.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"dev": "lite-server"
+	},
+	"author": "Fasih-Baig",
+	"license": "ISC",
+	"dependencies": {
+		"ganache-cli": "^6.1.6",
+		"web3": "^0.19.1"
+	},
+	"devDependencies": {
+		"lite-server": "^2.4.0"
+	}
+}

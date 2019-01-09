@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Dapp Token ICO Sale</title>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Theme CSS -->
+	<link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+
+	
+</head>
+<body style="background-color: #fcfffe;">
+	<div class="container" style="width: 580px;">
+		<div class="row" style="padding: 20px; margin: 10px;">
+			<div class="col-lg-12">
+				<h1 class="text-center display-3">Dapp Token ICO Sale</h1>	
+				<hr style="background-color: black;">
+			</div>	
+			<div id="loader" class="col-lg-12">
+				<center><img src="assets/img/gif/Double-Ring.gif" /></center>
+			</div>
+			<div id="content" class="text-center" style="display: none; color: black;">
+				<p style="font-size: 18px; font-style: italic;">
+					Introducing "Dapp Token" (DAPP)!
+					Token price is <b><span class="token-price"></span></b> Ether. You currently have <b><span class="dapp-balance"></span></b>&nbsp;DAPP.
+				</p>
+				<br>
+				<form onSubmit="App.buyTokens(); return false;" role="form">
+					<div class="form-group">
+						<div class="input-group">
+							<input id="numberOfTokens" class="form-control" type="number" name="number" value="1" min="1" pattern="[0-9]" />
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-outline-default">Buy Tokens</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<div class="progress-wrapper">
+				  <div class="progress-info">
+				    <div class="progress-label">
+				      <span style="color: black;">Tokens Sold</span>
+				    </div>
+				    <div class="progress-percentage">
+				      <span id="progress">0%</span>
+				    </div>
+				  </div>
+				  <div class="progress">
+				    <div id="progressBar" class="progress-bar bg-default" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+				  </div>
+				</div>
+				<p style="letter-spacing: 0.5px; font-style: italic;"><span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
+				<hr style="background-color: black;">
+				<p id="accountAddress" style="font-size: 15px; font-style: italic; color: black; letter-spacing: 0.5px;"></p>
+			</div>			
+		</div>
+	</div>
+	<!-- JS Core Files-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+     crossorigin="anonymous"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+	<!-- JS Files -->
+	<script src="assets/js/argon.min.js"></script>
+	<script src="assets/js/truffle-contract.min.js"></script>
+	<script src="assets/js/web3.min.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
