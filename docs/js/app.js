@@ -24,7 +24,7 @@ App = {
 			web3 = new Web3(App.web3Provider);
 		}
 		return App.initContracts();
-	},
+	},	
 
 	initContracts: function() {
 		App.contracts.DappToken = web3.eth.contract([
@@ -471,7 +471,6 @@ App = {
 								console.log(App.tokenPrice);
 								$("form").trigger("reset");
 								// Wait for Sell Event
-								return App.listenForEvents();
 							}
 							else {
 								console.error(error);

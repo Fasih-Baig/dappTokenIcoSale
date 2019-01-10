@@ -1,8 +1,8 @@
 App = {
 	web3Provider: null,
 	contracts: [],
-	account: '0x0',
 	loading: false,
+	account: '0x0',
 	tokenPrice: 1000000000000000,
 	tokenSold: 0,
 	tokenAvailable: 750000,
@@ -13,6 +13,7 @@ App = {
 	},
 
 	initWeb3: function() {
+
 		if(typeof web3 !== 'undefined'){
 			// If a web3 instance is already provided by Meta Mask
 			App.web3Provider = web3.currentProvider;
@@ -404,7 +405,7 @@ App = {
 		web3.eth.getCoinbase(function(err, account){
 			if(err === null){
 				App.account = account;
-				$("#accountAddress").html("Your Account: "+ account);
+				$("#accountAddress").html("Your Account: "+ App.account);
 			}
 		})
 
