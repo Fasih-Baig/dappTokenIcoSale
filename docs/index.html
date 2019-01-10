@@ -74,5 +74,17 @@
 	<script src="js/truffle-contract.min.js"></script>
 	<script src="js/web3.min.js"></script>
 	<script src="js/app.js"></script>
+	<script type="text/javascript">
+		function updateInterface() {
+			window.location.reload();
+		}
+		var account = web3.eth.accounts[0];
+		var accountInterval = setInterval(function() {
+		  if (web3.eth.accounts[0] !== account) {
+		    account = web3.eth.accounts[0];
+		    updateInterface();
+		  }
+		}, 5000);
+	</script>
 </body>
 </html>
